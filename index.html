@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+
+{% extends "base.html" %}
+{% block content %}
+<div>
+ 
+
+
+<p>Hello </p>
+
+
+
+
+<button> <a href="http://127.0.0.1:5000/company">Companies</a> </button>
+
+<table>
+{% for item in companies %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+</tr>
+{% endfor %}	
+</table>
+
+
+<button> <a href="http://127.0.0.1:5000/davinci">Get Employees</a> </button>
+<br><br>
+
+<button> <a href="http://127.0.0.1:5000/rates/USD">USD</a> </button>
+
+
+
+<button> <a href="http://127.0.0.1:5000/rates/CAD">CAD</a> </button>
+
+</br>
+</br>
+
+
+<p>{{rate}} </p>
+
+
+<p>{{study}} </p>
+
+
+
+
+
+
+
+
+
+<table>
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+</tr>
+{% endfor %}	
+</table>
+
+
+</div>
+{% endblock %}
+
+
+</body>
+</html>
+

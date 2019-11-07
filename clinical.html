@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+
+{% extends "base.html" %}
+{% block content %}
+<div>
+
+
+
+<p>Clinical Study </p>
+
+<form action="{{ url_for('handle_data') }}" method="post">
+
+
+<select id="clinid" type="text"  name="clinDropDown" placeholder="Select a ClinID">
+  <option value="NCT02194738">NCT02194738</option>
+  <option value="NCI-2014-01509">NCI-2014-01509</option>
+  <option value="NCT02201992">NCT02201992</option>
+  <option value="NCT03913936">NCT03913936</option>
+  <option value="NCI-2014-01509">NCI-2014-01509</option>
+  
+
+
+
+
+
+
+</select>
+
+
+<select id="clinValues" type="text"  name="clinValues" placeholder="Select a Clinical Value">
+  <option value="brief_summary">Brief Summary</option>
+  <option value="brief_title">Brief Title</option>
+  <option value="detail_description">Detail Description</option>
+  <option value="classification_code">Classification Code</option>
+  <option value="nci_id">nci id</option>
+
+<option value="nct_id">nct_id</option>
+<option value="protocol_id">protocal id</option>
+<option value="ccr_id">ccr id</option>
+<option value="ctep_id">ctep d</option>
+<option value="dcp_id">Classification Code</option>
+<option value="other_ids">Classification Code</option>
+<option value="associated_studies">associated_studies</option>
+<option value="outcome_measures">outcome measures</option>
+<option value="amendment_date">amendment date</option>
+<option value="current_trial_status">current trial status</option>
+<option value="current_trial_status_date">current trial status date</option>
+<option value="start_date">start date</option>
+<option value="start_date_type_code">start date type code</option>
+<option value="completion_date">completion date</option>
+<option value="completion_date_type_code">completion_date_type_code</option>
+<option value="record_verification_date">record_verification_date</option>
+<option value="official_title">official title</option>
+<option value="acronym">acronym</option>
+<option value="keywords">keywords</option>
+<option value="detail_description">detail description</option>
+<option value="classification_code">Classification code</option>
+<option value="interventional_model">interventional model</option>
+<option value="accepts_healthy_volunteers_indicator">accepts healthy volunteers indicator</option>
+<option value="study_protocol_type">study protocol type</option>
+<option value="study_subtype_code">study subtype code</option>
+<option value="study_population_description">study population description</option>
+<option value="study_model_code">study model code</option>">
+<option value="study_model_other_text">study model other text</option>
+<option value="sampling_method_code">sampling method code</option>
+<option value="bio_specimen">bio specimen</option>
+<option value="primary_purpose">primary purpose</option>
+<option value="phase">phase</option>
+<option value="masking">masking</option>
+<option value="principal_investigator">principal investigator</option>
+<option value="central_contact">central contact</option>
+<option value="lead_org">lead org</option>
+<option value="collaborators">collaborators</option>
+<option value="sites">sites</option>
+<option value="anatomic_sites">anatomic sites</option>
+<option value="diseases">diseases</option>
+<option value="biomarkers">biomarkers</option>
+<option value="minimum_target_accrual_number">minimum target accrual number</option>
+<option value="eligibility">eligibility</option>
+<option value="number_of_arms">number of arms</option>
+<option value="arms">arms</option>
+
+
+
+
+</select>
+  <input class="btn" type="submit" name=btnClin  value="submit">
+
+</form>
+<div>
+<table>
+  <tr>
+  <td>{{clinid}}</td> 
+
+
+  </tr>
+	<tr>
+		<td>{{data}}</td> 
+
+	</tr>
+
+</table>
+
+</div>
+
+
+</div>
+
+<table>
+    {% for row in diseaseTable %}
+    <tr>
+        {% for value in row %}
+        <td>{{ value }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
+
+
+</body>
+</html>
+

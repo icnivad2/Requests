@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+
+{% extends "base.html" %}
+{% block content %}
+
+
+<p>NASA Home</p>
+ 
+<form action="{{ url_for('nasa_today') }}" method="post">
+
+
+<select id="nasaitem" type="text"  name="ddnasatoday" placeholder="Select:">
+  <option value="copyright">copyright</option>
+  <option value="date">date</option>
+  <option value="hdrurl">hdurl</option>
+  <option value="media_type">media type</option>
+  <option value="service_version">service_version</option>
+  <option value="title">title</option>
+  <option value="url">url</option>
+  
+
+
+</select>
+
+  <input class="btn" type="submit" name=btnNasa  value="submit">
+
+
+</form>
+
+ 
+
+
+  <tr>
+    <td>{{data}}</td> 
+
+  </tr>
+
+</table>
+
+ 
+
+{% endblock %}
+
+
+</body>
+</html>
