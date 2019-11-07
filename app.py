@@ -112,7 +112,7 @@ def get_employees():
 	requeset_data = request.get_json()
 	for emp in employees:
 		data = emp['lastname'] + emp['firstname'] + '\n'
-
+	print('hello')
 
 	return data	
 
